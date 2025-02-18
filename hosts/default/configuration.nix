@@ -71,7 +71,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "sunset" = import .home.nix;
+      "sunset" = import ./home.nix;
     };
   };
 
@@ -127,7 +127,6 @@
     spotify
     bitwarden-desktop
     lf
-    home-manager
     # screenshot
     grim
     swappy
