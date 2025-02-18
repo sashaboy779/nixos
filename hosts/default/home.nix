@@ -6,6 +6,9 @@
 
   home.stateVersion = "24.11";
 
+  programs.git.userEmail = "sashaboychuk779@gmail.com";
+  programs.git.userName = "Oleksandr Boichuk";
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
