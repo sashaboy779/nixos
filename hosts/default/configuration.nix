@@ -140,7 +140,6 @@
     dunst # notification deamon
     libnotify
     swww
-    alacritty
     rofi-wayland
   ];
 
