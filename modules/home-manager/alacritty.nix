@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.alacritty = {
     enable = true;
@@ -7,6 +8,13 @@
       font = { 
         size = 12;
       };
+      general.import = [
+        "${pkgs.alacritty-theme}/gruvbox_dark.toml"
+      ];
     };
   };
+
+  home.packages = [
+    pkgs.alacritty-theme
+  ];
 }
