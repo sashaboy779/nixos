@@ -12,6 +12,8 @@
       ../../modules/nixos/default.nix
     ];
 
+  sunset.programs.fish.enable = true;
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
