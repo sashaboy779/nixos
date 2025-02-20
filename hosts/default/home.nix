@@ -16,6 +16,7 @@
     userName = "Oleksandr Boichuk";           
   };
 
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -24,7 +25,6 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
