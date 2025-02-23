@@ -6,9 +6,10 @@
       window = {
         opacity = 0.8;
         padding = {
-          x = 10;
-          y = 10;
+          x = 0;
+          y = 0;
         };
+        dynamic_padding = false;
       };
       scrolling.multiplier = 5;
       font = { 
