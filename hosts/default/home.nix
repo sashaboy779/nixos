@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
-
+let 
+  rose-pine-hyprcursor = import ../../packages/rose-pine-hyprcursor.nix { inherit pkgs; };
+in
 {
   imports = [
     ../../modules/home-manager/default.nix
@@ -16,6 +18,10 @@
     userName = "Oleksandr Boichuk";           
   };
 
+  gtk.enable = true;
+
+  gtk.cursorTheme.package = pkgs.rose-pine-cursor;
+  gtk.cursorTheme.name = "BreezeX-RosePine-Linux"; 
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -30,6 +36,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    # required for hyprcursor to work
+    ".local/share/icons/rose-pine-hyprcursor".source = "${rose-pine-hyprcursor}";
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

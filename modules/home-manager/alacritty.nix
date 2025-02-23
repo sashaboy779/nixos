@@ -12,7 +12,7 @@
       };
       scrolling.multiplier = 5;
       font = { 
-        size = 12;
+        size = 13;
       };
       general.import = [
         "${pkgs.alacritty-theme}/everforest_dark.toml"
