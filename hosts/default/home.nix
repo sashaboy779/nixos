@@ -23,9 +23,33 @@ in
   gtk.cursorTheme.package = pkgs.rose-pine-cursor;
   gtk.cursorTheme.name = "BreezeX-RosePine-Linux"; 
 
+  gtk.theme.package = pkgs.everforest-gtk-theme;
+  gtk.theme.name = "Everforest-Dark-BL";
+
+  dconf = {
+    settings = {
+      "org/gnome/desktop/interface" = {
+	      color-scheme = "prefer-dark"; # force dark theme system wide
+      };
+    };
+  };
+
+  gtk.iconTheme.package = pkgs.everforest-gtk-theme;
+  gtk.iconTheme.name = "everforest_light";
+
+  #qt = {
+  #  enable = false;
+  #  platformTheme = "gtk";
+  #  style = {
+  #    name = "adwaita-dark";
+  #    package = pkgs.adwaita-qt;
+  #  };
+  #};
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    xfce.thunar
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
