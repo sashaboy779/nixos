@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 let 
   rose-pine-hyprcursor = import ../../packages/rose-pine-hyprcursor.nix { inherit pkgs; };
 in
@@ -35,7 +35,7 @@ in
   };
 
   gtk.iconTheme.package = pkgs.everforest-gtk-theme;
-  gtk.iconTheme.name = "everforest_light";
+  gtk.iconTheme.name = "everforest-dark";
 
   #qt = {
   #  enable = false;
@@ -50,6 +50,8 @@ in
   # environment.
   home.packages = with pkgs; [
     xfce.thunar
+    hyprpaper
+    inputs.zen-browser.packages."${system}".default
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
