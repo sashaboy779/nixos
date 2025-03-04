@@ -63,6 +63,8 @@
     autoLogin.relogin = true;
   };
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+
   # rtkit is optional but recommended
   security.rtkit.enable = true;
   services.pipewire = {
